@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Регистрация на конференцию</title>
+        <link rel="stylesheet" href="/ui/css/index.css">
+    </head>
+    <body>
+        <h1>Форма регистрации на конференцию</h1>
+
+        <form id="registration-form" action="/answers" method="post">
+            <div>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" pattern="[А-Яа-яЁё]+" required>
+            </div>
+
+            <div>
+                <label for="surname">Фамилия:</label>
+                <input type="text" id="surname" name="surname" pattern="[А-Яа-яЁё]+" required>
+            </div>
+
+            <div>
+                <label for="patronymic">Отчество:</label>
+                <input type="text" id="patronymic" name="patronymic" pattern="[А-Яа-яЁё]+" required>
+            </div>
+
+            <div>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" pattern="\+7\d{10}" required>
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <input type="submit" value="Отправить">
+            </div>
+        </form>
+
+        <script src="/ui/js/index.js"></script>
+    </body>
+</html>
