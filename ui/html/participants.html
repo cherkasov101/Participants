@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Регистрация на конференцию</title>
+        <link rel="stylesheet" href="static/css/styles.css">
+    </head>
+    <body>
+        <div сlass="registration">
+            <nav>
+                <ul class="menu">
+                  <li><a href="/">Форма регистрации</a></li>
+                  <li><a href="/participants">Зарегистрированные участники</a></li>
+                </ul>
+            </nav>
+            <div class="header">
+                <h1>Зарегистрированные участники</h1>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Отчество</th>
+                    <th>Телефон</th>
+                    <th>Email</th>
+                    <th>Секция</th>
+                    <th>Дата рождения</th>
+                    <th>Доклад</th>
+                    <th>Тема доклада</th>
+                </tr>
+                {{range .Participants}}
+                <tr>
+                    <td>{{.Name}}</td>
+                    <td>{{.Surname}}</td>
+                    <td>{{.Patronymic}}</td>
+                    <td>{{.Phone}}</td>
+                    <td>{{.Email}}</td>
+                    <td>{{.Section}}</td>
+                    <td>{{.Birthdate}}</td>
+                    <td>{{.Presentation}}</td>
+                    <td>{{.Topic}}</td>
+                </tr>
+                {{end}}
+            </table>
+        </div>
+        
+
+        <script src="static/js/index.js"></script>
+    </body>
+</html>
